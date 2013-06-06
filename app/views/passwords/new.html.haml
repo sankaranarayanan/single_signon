@@ -1,0 +1,6 @@
+%h1 Forgot Password
+
+= simple_form_for @identity, :url => "/passwords" do |f|
+  = f.input :email
+  .actions
+    = submit_tag "Reset Password"

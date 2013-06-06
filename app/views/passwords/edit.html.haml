@@ -1,0 +1,12 @@
+%h1 Reset Password
+
+= simple_form_for @identity, :url => password_path(params[:id]) do |f|
+  - if @identity.errors.any?
+    %ul
+      - for message in @identity.errors.full_messages
+        %li= message
+
+  = f.input :password
+
+  .actions
+    = f.submit "Update Password"
